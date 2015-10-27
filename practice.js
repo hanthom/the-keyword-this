@@ -24,9 +24,15 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
+var user = {
+  username: 'hanthom',
+  email: 'hanthom@gmail.com',
+  getUsername: function() {
+    return this.username;
+  }
+}
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
+console.log(user.getUsername());
 
 //Next Problem
 
@@ -34,7 +40,15 @@
 // Write the function definitions which will make the following function invocations function properly.
 
   //Function Invocations Here
-
+function Car(brand, make, year) {
+  this.brand = brand;
+  this.make = make;
+  this.year = year;
+  this.move = 0;
+  }
+Car.prototype.moveCar = function() {
+  return this.move+=10;
+};
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 
@@ -54,7 +68,8 @@ var getYear = function(){
 //Above you're given the getYear function. Using your prius and mustang objects from above, use the proper syntax that will allow for you to call the getYear function with the prius then the mustang objects being the focal objects. *Don't add getYear as a property on both objects*.
 
   //Code Here
-
+console.log(getYear.call(prius));
+console.log(prius);
 
 
 //New Problem
