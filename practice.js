@@ -2,19 +2,22 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+      The purpose of the this keyword is to be able to use context within our coding without directly referencing everything. This allows us to make use of constructors and prototype, among other things, to help simplify our code.
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-
+      Implicit Binding - 
+      Explicit Binding - 
+      new Binding - 
+      Default Binding - 
   // 3) What is the difference between call and apply?
 
       //Answer
-
+      You use call when you are taking a function outside of an object and using the properties within the object for running that function.  As for Apply, the method calls a function with a given this value and arguments provided as an array.
   // 4) What does .bind do?
-
+      
       //Answer
-
+      .Bind will take a method from another object and use for this the context of a different object.
 
 //Next Problem
 
@@ -86,14 +89,14 @@ var getUsername = function(){
   console.log(this.username);
 };
 
-setTimeout(getUsername, 5000);
+setTimeout(getUsername.bind(user), 5000);
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 
   //Answer Here
-
+  Undefined
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
-
+  It is not bound to anything and is thus undefined.
 //Fix the setTimeout invocation so that the user object will be the focal object when getUsername is ran.
