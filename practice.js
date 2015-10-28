@@ -93,6 +93,7 @@ var getUsername = function(){
 };
 
 setTimeout(getUsername.bind(user), 5000);
+          // Have to use bind here for it to run correctly, as call and apply will make the text show immediately and not be delayed by the setTimeout.
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 
