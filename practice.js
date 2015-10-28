@@ -15,6 +15,7 @@
       //Answer
       You use call wwhen you want to take a list of arguments (need to know the arguments).  As for Apply, the method calls a function with a given this value and arguments provided as an array.
         'Apply accepts and list of arguments(array) while call will look for a specific argument or multiple arguments'
+        '.call(prius, a, v, 3, 5) vs. .apply(prius, [1,2 ,3 ,4])'
   // 4) What does .bind do?
       
       //Answer
@@ -73,6 +74,7 @@ var getYear = function(){
 
   //Code Here
 console.log(getYear.call(prius));
+console.log(getYear.call(mustang));
 console.log(prius);
 
 
@@ -99,5 +101,5 @@ setTimeout(getUsername.bind(user), 5000);
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
-  It is not bound to anything and is thus undefined.
+  This is bound to the context of setTimeout, in teh case of setTimeout, 'this' points to the global scope.
 //Fix the setTimeout invocation so that the user object will be the focal object when getUsername is ran.
