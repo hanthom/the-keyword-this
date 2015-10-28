@@ -2,22 +2,23 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-      The purpose of the this keyword is to be able to use context within our coding without directly referencing everything. This allows us to make use of constructors and prototype, among other things, to help simplify our code.
+      The purpose of the this keyword is to be able to use context within our coding without directly referencing everything. This allows us to make use of constructors and prototype, among other things, to help simplify our code. (Like how we use pronouns)
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-      Implicit Binding - 
-      Explicit Binding - 
-      new Binding - 
+      Implicit Binding - 'Left of dot binding' meaning someMethod in someObject.someMethod) will be implicitly bound to someObject.
+      Explicit Binding - Using call(), apply(), or bind() to direct what this is pointing to.
+      new Binding - For use with constructors. When you create a new object with a constructor, the this in the constructor goes to the new name.
       Default Binding - 
   // 3) What is the difference between call and apply?
 
       //Answer
-      You use call when you are taking a function outside of an object and using the properties within the object for running that function.  As for Apply, the method calls a function with a given this value and arguments provided as an array.
+      You use call wwhen you want to take a list of arguments (need to know the arguments).  As for Apply, the method calls a function with a given this value and arguments provided as an array.
+        'Apply accepts and list of arguments(array) while call will look for a specific argument or multiple arguments'
   // 4) What does .bind do?
       
       //Answer
-      .Bind will take a method from another object and use for this the context of a different object.
+      .Bind will take a method from one object and use the context of a different object to apply for this.
 
 //Next Problem
 
